@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="TestovoeZadanie.userControl.DataBuildRecord"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestovoeZadanie.userControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="1000">
+    
+    <ScrollViewer Padding="0, 20">
+        <StackPanel Orientation="Vertical">
+
+        <!-- Общие сведения -->
+
+            <TextBlock Text="Общие сведения" Style="{StaticResource texBoxTitleInPage}"/>
+            <Border Style="{StaticResource BorderRecords}">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Кадастровый номер:" Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockCudNumber" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Тип:" Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockType" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Площадь:" Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockArea" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Назначение:" Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockPurpose" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Стоимость:" Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockCost" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+        <!-- Адрес -->
+            <TextBlock Text="Адрес" Style="{StaticResource texBoxTitleInPage}"/>
+            <Border Style="{StaticResource BorderRecords}">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Полный адрес: " Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockAddress" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="ОКАТО: " Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockOKATO" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="КЛАДР: " Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockKLADR" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Почтовый индекс: " Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockPostalCode" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Регион: " Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockRegion" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Район: " Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockDistrict" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Местонахождение: " Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockLocality" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Улица: " Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockStreet" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Дом: " Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockLevel1" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Другое: " Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockOther" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="Описание позиции:" Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockPositionDescription" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <Button Style="{StaticResource ButtonSaveXml}" Content="Сохранить в XML" Margin="0,20,0,0" Click="ButtonClickSave"/>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

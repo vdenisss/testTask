@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="TestovoeZadanie.userControl.Faq"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestovoeZadanie.userControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ScrollViewer Padding="0, 20">
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Помощь" Style="{StaticResource texBoxTitleInPage}"
+                       FontSize="18"/>
+
+            <!-- Работу выполнил -->
+            <TextBlock Text="Работа выполнена:" Style="{StaticResource texBoxTitleBlock}"/>
+            <Border Style="{StaticResource BorderRecords}">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="ФИО:" Style="{StaticResource textBoxTitle}" FontSize="12"/>
+                        <TextBlock Text="Варанкин Денис Олегович" Style="{StaticResource textBoxValue}" FontSize="14"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Дата выполнения:" Style="{StaticResource textBoxTitle}" FontSize="12"/>
+                        <TextBlock Text="25.06.2024" Style="{StaticResource textBoxValue}" FontSize="14"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Выбор файлов -->
+            <TextBlock Text="Выбор файлов" Style="{StaticResource texBoxTitleBlock}"/>
+            <Border Style="{StaticResource BorderRecords}">
+                <TextBlock Style="{StaticResource textBoxValue}" FontSize="14" 
+                           Text="Для того, чтобы выбрать файл необходимо нажать на кнопку в левом верхнем углу экрана. После этого откроется проводник для выбора нужного Xml-файла"/>
+            </Border>
+
+            <!-- Отображение содержимого файла -->
+            <TextBlock Text="Отображение содержимого файла" Style="{StaticResource texBoxTitleBlock}"/>
+            <Border Style="{StaticResource BorderRecords}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource textBoxValue}" FontSize="14" 
+                               Text="Просмотр содержимого выбранного Xml-файла реализовано в виде дерева объектов, которое находится в левой части экрана приложения. "/>
+                    <TextBlock Style="{StaticResource textBoxValue}" Margin="0, 15, 0, 0" FontSize="14" 
+                               Text="Элементы в дереве представляют собой корневой узел, который можно раскрыть для просмотра узлов с уникальным идентификатором. Также по нажатию на корневой узел в дереве в правой части экрана отображается список всех вложенных узлов с уникальным идентификатором."/>
+                </StackPanel> 
+            </Border>
+
+            <!-- Просмотр содержимого узла -->
+            <TextBlock Text="Просмотр содержимого узла" Style="{StaticResource texBoxTitleBlock}"/>
+            <Border Style="{StaticResource BorderRecords}">
+                <TextBlock Style="{StaticResource textBoxValue}" FontSize="14" 
+                           Text="По нажатию на узел с уникальным идентификатором из дерева объектов или из списка в правой части экрана отображается полное содержание выбранного узла."/>
+            </Border>
+
+            <!-- Сохранение выбранного узла -->
+            <TextBlock Text="Сохранение выбранного узла" Style="{StaticResource texBoxTitleBlock}"/>
+            <Border Style="{StaticResource BorderRecords}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource textBoxValue}" FontSize="14" 
+                               Text="Сохранение выбранного узла происходит по нажатию по кнопке, которая находится в нижней части экрана после всего содержимого узла. "/>
+                    <TextBlock Style="{StaticResource textBoxValue}" Margin="0, 15, 0, 0" FontSize="14" 
+                               Text="При нажатии на кнопку открывается проводник, в котором можно указать место сохранения файла, а также его имя. В качестве имени по умолчанию предлагается уникальный идентификатор выбранного узла. "/>
+                    <TextBlock Style="{StaticResource textBoxValue}" Margin="0, 15, 0, 0" FontSize="14" 
+                               Text="В сохраняемом файле содержится вся вложенность выбранного узла. "/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

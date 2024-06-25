@@ -1,0 +1,38 @@
+﻿<Window x:Class="TestovoeZadanie.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uc="clr-namespace:TestovoeZadanie.usercontrol"
+        xmlns:local="clr-namespace:TestovoeZadanie"
+        xmlns:model="clr-namespace:TestovoeZadanie.model"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="1000" WindowStyle="ThreeDBorderWindow">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Выбрать файл" Click="OpenFile_Click" />
+            </MenuItem>
+            <MenuItem Header="Помощь" Click="Faq_Click"/>
+        </Menu>
+        <DockPanel DockPanel.Dock="Left">
+            <DockPanel Width="250" Style="{StaticResource DockPanelGradientBlack}">
+                <TreeView x:Name="treeTest" SelectedItemChanged="tree_SelectedItemChanged" 
+                          Template="{DynamicResource TreeViewTemplateObject}"
+                          Padding="10, 10, 0, 10" ItemContainerStyle="{StaticResource TreeViewItemTemplateObject}">
+                    <TreeView.ItemTemplate>
+                        <HierarchicalDataTemplate ItemsSource="{Binding Path=Records}">
+                            <TextBlock Text="{Binding Path=Name}" FontSize="14"/>
+                            <HierarchicalDataTemplate.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Id}"/>
+                                </DataTemplate>
+                            </HierarchicalDataTemplate.ItemTemplate>
+                        </HierarchicalDataTemplate>
+                    </TreeView.ItemTemplate>
+                </TreeView>
+            </DockPanel>
+            <DockPanel x:Name="stackPanelData" Style="{StaticResource DockPanelGradient}"/>
+        </DockPanel>
+    </DockPanel>
+</Window>

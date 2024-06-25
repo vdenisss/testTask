@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="TestovoeZadanie.userControl.DataSpatialData"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestovoeZadanie.userControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ScrollViewer Padding="0, 20">
+        <StackPanel Orientation="Vertical">
+            
+            <!-- Местоположение -->
+            
+            <TextBlock Text="Местоположение" Style="{StaticResource texBoxTitleInPage}"/>
+            <Border Style="{StaticResource BorderRecords}">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock Text="sk id: " Style="{StaticResource textBoxTitle}"/>
+                        <TextBlock x:Name="textBlockSkId" Style="{StaticResource textBoxValue}"/>
+                    </StackPanel>
+                    <DataGrid x:Name="dataGridOrdinates" AutoGenerateColumns="False" ItemsSource="{Binding Path=ordinates}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="X" Binding="{Binding Path=x}"/>
+                            <DataGridTextColumn Header="Y" Binding="{Binding Path=y}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </Border>
+            <Button Style="{StaticResource ButtonSaveXml}" Content="Сохранить в XML" Margin="0,20,0,0" Click="ButtonClickSave"/>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
